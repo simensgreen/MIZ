@@ -1,0 +1,3 @@
+[submodule "vfx/TkApp"]
+	path = vfx/TkApp
+	url = https://github.com/simensgreen/TkApp.git
