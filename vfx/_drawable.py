@@ -2,6 +2,7 @@ from tkinter import Canvas
 
 
 class Drawable:
+    opts = {}
     canvas: Canvas = None
     __pos = 0, 0
 
@@ -21,7 +22,6 @@ class Drawable:
     @pos.setter
     def pos(self, new_value):
         self.__pos = new_value
-        self.update()
 
     def add_pos(self, coords):
         return [(x + self.__pos[0], y + self.__pos[1]) for x, y in coords]

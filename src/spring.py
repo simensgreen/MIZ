@@ -14,7 +14,7 @@ class Spring:
         self.normal_len = self.len
 
     def __x_coords(self):
-        for i in range(self.turns * 2):
+        for i in range(self.turns * 2 + 1):
             yield self.left + self.turn_width / 2 * i
 
     @property

@@ -6,7 +6,7 @@ class DrawableSpring(Spring, Drawable):
     id = None
 
     def draw(self):
-        self.id = self.canvas.create_line(self.add_pos(self.coords), tags=('spring', self))
+        self.id = self.canvas.create_line(self.add_pos(self.coords), tags=('cube', self), **self.opts)
 
     def delete(self):
         self.canvas.delete(self.id)
