@@ -47,10 +47,10 @@ class Table(Drawable):
         self.cube = DrawableCube(self.coords[3] - self.coords[1])
         self.cube.canvas = canvas
         self.cube.pos = self.center
-        self.left_spring = DrawableSpring(self.left, self.cube.left, 10, self.cube.side / 3)
+        self.left_spring = DrawableSpring(self.left, self.cube.left, 10, self.cube.side * .25)
         self.left_spring.canvas = canvas
         self.left_spring.pos = self.left_spring.pos[0], self.center[1]
-        self.right_spring = DrawableSpring(self.cube.right, self.right, 10, self.cube.side / 3)
+        self.right_spring = DrawableSpring(self.cube.right, self.right, 10, self.cube.side * .25)
         self.right_spring.canvas = canvas
         self.right_spring.pos = self.right_spring.pos[0], self.center[1]
 

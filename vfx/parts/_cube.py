@@ -46,3 +46,13 @@ class DrawableCube(Cube, Drawable):
     @property
     def right(self):
         return self.add_pos(self.coords)[1][0]
+
+    @property
+    def side(self):
+        return self._side
+
+    @side.setter
+    def side(self, new_value):
+        delta = self.side - new_value
+        self.pos = self.pos[0], self.pos[1] + delta / 2
+        self._side = new_value
